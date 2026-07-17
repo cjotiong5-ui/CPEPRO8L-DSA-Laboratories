@@ -82,7 +82,7 @@ Resizes occurred exactly at logical sizes **1, 2, 4, and 8** — each time the a
 
 ### 4.3 Screenshots
 
-*[![alt text](image.png)]*
+![alt text](image.png)
 
 ---
 
