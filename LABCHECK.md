@@ -3,18 +3,17 @@
 **Course:** CPEPRO8L — Data Structures and Algorithms Laboratory  
 **Student:** Cristan Jay N. Otiong  
 **Repository:** `cjotiong5-ui/CPEPRO8L-DSA-Laboratories`  
-**Recheck date:** August 14, 2026  
-**Repository snapshot:** Latest commit available during the recheck  
+**Recheck date:** August 26, 2026  
 **Status:** Provisional repository-based evaluation
 
 ## Recheck Summary
 
-- Labs found: **1–5**
-- New laboratory submissions since the previous check: **None**
-- Missing from the current sequence: **Labs 6 and 7**
+- Labs found: **1–10**
+- Newly evaluated: **Labs 6, 7, 8, 9, and 10**
+- Missing from the current sequence (Labs 1–7): **None**
 - All submitted Python files compile successfully.
-- All submitted implementations continue to pass the functional and edge-case tests.
-- Previously identified documentation corrections remain outstanding.
+- All ten implementations pass the functional and edge-case tests.
+- Six of the eight corrections from the August 14 recheck were applied.
 
 ## Evaluation Criteria
 
@@ -36,29 +35,57 @@
 | Lab 3 | 40 | 17 | 18 | 9 | 8 | **92/100** |
 | Lab 4 | 40 | 17 | 16 | 7 | 8 | **88/100** |
 | Lab 5 | 40 | 18 | 10 | 6 | 8 | **82/100** |
-| **Average of submitted labs** | **40.0** | **17.6** | **16.2** | **8.0** | **8.0** | **89.8/100** |
+| Lab 6 | 40 | 17 | 15 | 8 | 8 | **88/100** |
+| Lab 7 | 40 | 18 | 20 | 9 | 8 | **95/100** |
+| Lab 8 | 40 | 18 | 20 | 9 | 8 | **95/100** |
+| Lab 9 | 40 | 18 | 19 | 8 | 8 | **93/100** |
+| Lab 10 | 40 | 18 | 17 | 6 | 8 | **89/100** |
+| **Average of submitted labs** | **40.0** | **17.7** | **17.2** | **8.0** | **8.0** | **90.9/100** |
 
-If Labs 1–7 are all required and every missing laboratory receives zero, the completion-adjusted grade is **64.1/100**. Apply this only according to the instructor's deadline and missing-submission policy.
+Labs 1–7 are all present, so no completion adjustment applies to the required sequence.
+
+## Corrections Verification (August 14 list)
+
+| # | Correction | Status |
+|---|---|---|
+| 1 | Lab 5 documents five customized mathematical expressions | **Applied** |
+| 2 | Lab 5 includes a step-by-step stack trace for `{[()]}` | **Applied** |
+| 3 | Lab 5 README references `lab5_bracket_parser.py` | **Applied** |
+| 4 | Lab 4 report placeholder name and date replaced | **Applied** |
+| 5 | Reports renamed `read.md` → `README.md` | **Applied** |
+| 6 | Root README expanded with a laboratory index | **Not applied** — still a title only |
+| 7 | Leftover `TODO` comments and Lab 3 `pass` removed | **Applied** |
+| 8 | Labs 6 and 7 submitted | **Applied** — Labs 8–10 also submitted |
 
 ## Verified Tests
 
-- Lab 1: constant, linear, and quadratic function results
-- Lab 2: 33 appends, capacity growth, value preservation, and invalid indices
-- Lab 3: empty-list behavior and head, middle, and tail deletion
-- Lab 4: reciprocal `prev` links and circular tail-to-head closure
-- Lab 5: LIFO behavior, underflow, and ten balanced/unbalanced expressions
+- Labs 1–5: all previously passing tests remain passing.
+- Lab 6: FIFO ordering, overflow rejection, underflow warning, and circular wraparound with freed-slot reuse.
+- Lab 7: first, middle, and last targets; absent target; empty-range base case; all five results match the report table.
+- Lab 8: inorder, preorder, and postorder traversals verified against the report (`20 30 40 50 60 70 80`, `50 30 20 40 70 60 80`, `20 40 30 60 80 70 50`).
+- Lab 9: all four rotation cases (LL, RR, LR, RL) rebalance to a height-2 tree rooted at 20 with correct children.
+- Lab 10: real collision demonstrated (Alice and Eve both hash to bucket 3 and chain correctly); update-if-exists, retrieval, and load factor verified.
 
-## Corrections Still Required
+## Important Documentation Finding
 
-1. Lab 5 must document five customized mathematical expressions.
-2. Lab 5 must include a step-by-step stack trace for `"{[()]}"`.
-3. Correct the Lab 5 README filename reference to `lab5_bracket_parser.py`.
-4. Replace the placeholder name and date in the Lab 4 report.
-5. Rename laboratory reports from `read.md` to `README.md`.
-6. Expand the root README with a laboratory index and links.
-7. Remove leftover `TODO` comments and the unnecessary Lab 3 `pass` statement.
-8. Submit Labs 6 and 7 when required.
+Several new reports contain **unedited generated text** that should have been removed before submission:
+
+- **Lab 10 README:** leftover self-correction passages remain in the hash-computation section — *"Let me verify with the actual hash function:"*, *"Actually, let me compute precisely:"*, *"Hmm, let me recompute Charlie…"* — together with an incorrect intermediate sum (588; the correct ASCII sum for "Charlie" is 696). The final console-output values shown are correct.
+- **Lab 6 README:** the phrase “reusing空位 positions” contains Chinese characters (“空位”).
+- **Lab 9 README:** “普通” appears three times where "ordinary" was intended.
+- **Lab 9, Test 3:** the insertion sequence `[10, 30, 20]` is labeled the **LR case** in both the source comment and the README heading; it is the **RL case** (the trace text below the heading describes the double rotation correctly).
+
+The implementations themselves are correct and independently verified; these findings affect documentation quality and raise an authorship question the instructor may wish to address (for example, through an oral or code defense).
+
+## Corrections Required
+
+1. Remove the leftover generated reasoning passages and the incorrect intermediate table from the Lab 10 README; keep one clean, correct hash-computation table.
+2. Remove the Chinese-character artifacts from the Lab 6 (“空位”) and Lab 9 (“普通”) READMEs.
+3. Relabel Lab 9 Test 3 as the **RL case** in the source comment and the README heading.
+4. Add the required 10-enqueue/dequeue state trace to Lab 6 — in both the report and the source driver (only the 5-operation sample is currently recorded).
+5. Expand the root `README.md` with a laboratory index and links (outstanding since August 14).
+6. Remove `LABCHECK.md` from the repository before final submission; it is an instructor document, not a deliverable.
 
 ## Instructor Note
 
-The submitted implementations remain functionally strong. No new laboratory work or corrections were detected during this recheck, so the submitted-work average is unchanged. Scores may still be adjusted for deadlines, late submissions, missing laboratories, or an oral/code defense.
+The completion of the full Lab 1–10 sequence is a strong effort, and Labs 7–9 are excellent — accurate stack-trace and rotation diagrams with thorough complexity analysis. The new deductions concern the unproofread generated text in the reports rather than the code. Scores may be adjusted for deadlines, late submissions, or an oral/code defense.
