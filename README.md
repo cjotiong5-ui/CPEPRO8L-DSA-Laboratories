@@ -35,7 +35,6 @@ These are the 10 labs I've finished so far:
 CPEPRO8L-DSA-Laboratories-main/
 │
 ├── README.md                          ← main repo documentation
-├── READ.md                            ← this file (quick overview)
 ├── LABCHECK.md                        ← instructor's lab recheck notes
 │
 ├── lab_01_python_CPE/                 ← Lab 1: object references & complexity
