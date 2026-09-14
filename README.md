@@ -83,14 +83,9 @@ CPEPRO8L-DSA-Laboratories-main/
 ## Short Explanation of Each File
 
 - **`README.md`** — The main documentation of the whole repository. Lists all labs, the folder naming rules, and the standards I (and any AI agent) follow when adding or editing labs.
-- **`READ.md`** — A casual, quick overview of the repo (this file).
 - **`LABCHECK.md`** — The instructor's recheck of the repository after evaluation (grades, notes, and things that still need correcting).
 - **`lab_XX_python_CPE/`** — One folder per lab activity. Naming = `lab_` + two-digit number + `_python_CPE`.
 - **`*.py`** — The actual Python program for that lab (for example, `lab7_recursive_search.py` implements recursive binary search).
 - **`README.md` (inside each lab)** — The detailed report for that lab: title, intro, objectives, methodology, source code link, execution output, analysis, and complexity.
-- **`image.png`** — Extra image I attached to Lab 2's documentation.
 
-## Quick Notes
 
-- Date format is a bit mixed (some `MM/DD/YY`, some fuller), but those are the dates written on each lab's own README.
-- Each lab folder is self-contained: if you open one, you've got everything you need to run and understand it.
